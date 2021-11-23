@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  logback levels in order TRACE DEBUG INFO WARN ERROR-->
+<configuration>
+
+	<!-- https://www.youtube.com/watch?v=Y-yTG4xi_Qg -->
+
+	<property name="LOGDIR" value="/Users/rb9594/Desktop/DevShop/workspace/ST_VENOM/"/>
+	
+	<appender name="Console" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%d [%thread] %-5level %-35logger{40} - %msg%n</pattern>
+		
+			<!-- install Ansi Console from Eclipse Marketplace if you want to add colors/highlight to console -->
+			<!--<pattern>%yellow(%d) %blue([%thread]) %highlight(%-5level) %-35logger{40} - %green(%msg%n)</pattern>-->
+		</encoder>
+	</appender>
+	
+	
+	<!-- 
+	<appender name="File" class="ch.qos.logback.core.FileAppender">
+		<file>${LOGDIR}bohnert.log</file>
+		<encoder>
+			<pattern>%d [%thread] %-5level %-35logger{40} - %msg%n</pattern>
+		</encoder>
+	</appender>
+	-->
+	
+
+	<appender name="File" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${LOGDIR}ryanbohnert.log</file>
+		<encoder>
+			<pattern>%d [%thread] %-5level %-35logger{40} - %msg%n</pattern>
+		</encoder>
+		
+		<rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+			<fileNamePattern>${LOGDIR}bohnert-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+			<maxFileSize>5KB</maxFileSize>
+			<maxHistory>3</maxHistory>
+			<totalSizeCap>100KB</totalSizeCap>
+			<cleanHistoryOnStart>true</cleanHistoryOnStart>
+		</rollingPolicy>
+	</appender>
+	
+	<!--<logger name="com.bookstore.service" level="TRACE"/>-->
+	
+	<root level="INFO">
+		<appender-ref ref="Console"/>
+		<appender-ref ref="File"/>
+	</root>
+</configuration>

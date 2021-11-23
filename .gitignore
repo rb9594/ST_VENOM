@@ -1,0 +1,8 @@
+#ignore
+build
+.project
+.classpath
+.settings
+target
+.metadata
+.DS_store
