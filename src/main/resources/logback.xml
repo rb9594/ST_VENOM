@@ -27,7 +27,7 @@
 	
 
 	<appender name="File" class="ch.qos.logback.core.rolling.RollingFileAppender">
-		<file>${LOGDIR}ryanbohnert.log</file>
+		<file>${LOGDIR}bohnert.log</file>
 		<encoder>
 			<pattern>%d [%thread] %-5level %-35logger{40} - %msg%n</pattern>
 		</encoder>
@@ -43,7 +43,7 @@
 	
 	<!--<logger name="com.bookstore.service" level="TRACE"/>-->
 	
-	<root level="INFO">
+	<root level="DEBUG">
 		<appender-ref ref="Console"/>
 		<appender-ref ref="File"/>
 	</root>

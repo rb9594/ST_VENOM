@@ -1,7 +1,7 @@
 package com.att.data.retired;
 
 import java.sql.*;
-import java.util.ArrayList;
+//import java.util.ArrayList;
 
 import com.att.model.*;
 
@@ -31,17 +31,18 @@ public class WebPhoneDAO {
 		
         	ResultSet rs = stmt.executeQuery(query);
         
-			ArrayList<Employee> employeeList = new ArrayList<Employee>();
+		/*	ArrayList<Employee> employeeList = new ArrayList<Employee>();*/
 		
 			Employee employee = new Employee();
 			
 			while(rs.next()) {
-				
+				/*
 				employee.setFirstName(rs.getString("first_name"));
 				employee.setLastName(rs.getString("last_name"));
 				employee.setJobTitleName(rs.getString("job_title_name"));
 				System.out.println(employee.getFirstName() + " " + employee.getLastName() + " =>" + employee.getJobTitleName());
 				employeeList.add(employee);
+				*/
 				
 			}
 			
