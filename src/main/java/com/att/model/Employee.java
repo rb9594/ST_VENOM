@@ -1,5 +1,7 @@
 package com.att.model;
 
+
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -23,7 +25,7 @@ public class Employee {
 	private String spi = null;
 
 	@OneToOne
-	private Laptop laptop;
+	private Laptop laptop = null;
 	
 	public Employee() {}
 	
@@ -61,7 +63,7 @@ public class Employee {
 	
 	
 
-	public Laptop getLaptop() {
+	public Laptop  getLaptop() {
 		return laptop;
 	}
 

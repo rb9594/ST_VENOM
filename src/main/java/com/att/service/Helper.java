@@ -20,17 +20,16 @@ public class Helper {
 		try {
 
 			LOGGER.info("Start Helper main()");
-	        
-			EmployeeProfile employeeProfile = new EmployeeProfile();
-			employeeProfile.setfName("Mark");
-			employeeProfile.setLname("Beveridge");
-			employeeProfile.setAge(65);
-			
+
 			Laptop laptop = new Laptop();
 			laptop.setLid(101);
 			laptop.setLname("Dell");
 			
-			
+			EmployeeProfile employeeProfile = new EmployeeProfile();
+			employeeProfile.setfName("Mark");
+			employeeProfile.setLname("Beveridge");
+			employeeProfile.setAge(65);
+		
 	        //create Employee object
 			Employee employee = new Employee();
 			employee.setEmployeeProfile(employeeProfile);
@@ -38,6 +37,7 @@ public class Helper {
 			employee.setAttuid("mb0914");  
 			employee.setLaptop(laptop);
 			
+
 			LOGGER.info("create laptop");
 			LaptopDAO laptopDAO = new LaptopDAO();
 			laptopDAO.createLaptop(laptop);

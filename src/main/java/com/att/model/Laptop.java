@@ -1,7 +1,9 @@
 package com.att.model;
 
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
+
 
 @Entity
 public class Laptop {
@@ -10,6 +12,7 @@ public class Laptop {
 	@Id
 	private int lid;
 	private String lname;
+
 	
 	public Laptop() {}
 
@@ -28,7 +31,7 @@ public class Laptop {
 	public void setLname(String lname) {
 		this.lname = lname;
 	}
-	
+
 	
 	
 }
